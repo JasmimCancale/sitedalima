@@ -13,6 +13,26 @@
 
 		<style>
 
+/* Define o tamanho desejado para telas grandes */
+.logo {
+  width: 400px;
+  height: auto;
+}
+
+/* Ajusta o tamanho da logo em telas menores para mantê-la responsiva */
+@media (max-width: 768px) {
+  .logo {
+    width: 250px;
+  }
+}
+
+@media (max-width: 576px) {
+  .logo {
+    width: 200px;
+  }
+}
+
+			
 /* Efeito hover para o ul */
 .nav-menu:hover {
     background-color: blue;
@@ -95,7 +115,7 @@
     <div class="container-fluid">
       <!-- Logo -->
       <a class="navbar-brand" href="#">
-        <img src="Dalima.png" width="150" height="50" alt="Logo">
+        <img src="Dalima.png" class="logo" alt="Logo">
       </a>
 
       <!-- Botão de Menu de Hambúrguer para telas pequenas -->
@@ -120,6 +140,7 @@
     </div>
   </nav>
 </div>
+
 
 	
 		<div class="novo">
