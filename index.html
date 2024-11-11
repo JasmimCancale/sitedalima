@@ -29,7 +29,7 @@
 
 /* Garantir que o conteúdo da div "novo" seja responsivo */
 .novo {
-  padding-top: 80px; /* Ajuste para compensar a altura da navbar */
+  padding-top: -120px; /* Ajuste para compensar a altura da navbar */
 }
 
 #header .content {
@@ -51,7 +51,7 @@
   display: flex;
   justify-content: left;
   gap: 10px;
-  margin-top: 10px;
+  margin-top: 5px;
 }
 
 .image.phone {
@@ -68,11 +68,11 @@
 @media (max-width: 768px) {
   /* Ajustes para dispositivos móveis */
   .navbar {
-    height: 120px; /* Reduzindo a altura da navbar em telas menores */
+    height: 224px; /* Reduzindo a altura da navbar em telas menores */
   }
 
   .navbar-brand .logo {
-    width: 120px; /* Reduzir o tamanho do logo em telas pequenas */
+    width: 250px; /* Reduzir o tamanho do logo em telas pequenas */
   }
 
   .actions {
@@ -91,8 +91,8 @@
   }
 
   .image.phone img {
-    max-width: 100%;
-    height: auto;
+    max-width: 0;
+    height: 0;
   }
 }
 
