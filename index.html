@@ -13,26 +13,96 @@
 
 		<style>
 
-/* Define o tamanho desejado para telas grandes */
-.logo {
-  width: 400px;
+
+/* Estilos gerais para a Navbar */
+.navbar {
+  background-color: rgb(241, 241, 241);
+  height: 145px; /* Definindo a altura da navbar */
+  display: flex;
+  align-items: center; /* Alinha o conteúdo verticalmente */
+}
+
+.navbar-brand .logo {
+  width: 300px; /* Logo com tamanho fixo de 400px */
   height: auto;
 }
 
-/* Ajusta o tamanho da logo em telas menores para mantê-la responsiva */
+/* Garantir que o conteúdo da div "novo" seja responsivo */
+.novo {
+  padding-top: 80px; /* Ajuste para compensar a altura da navbar */
+}
+
+#header .content {
+  text-align: left;
+  
+  margin-left: -100px;
+  
+}
+
+/* Títulos dentro do header */
+#header h1 {
+  color: red;
+  text-shadow: 1px 1px 1px rgb(26, 25, 25), 0 0 5px rgb(255, 15, 15), 0 0 2px rgb(252, 13, 13);
+  
+}
+
+/* Responsividade para os botões */
+.actions {
+  display: flex;
+  justify-content: left;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.image.phone {
+
+	margin-left: 30%;
+}
+
+
+
+
+
+
+
 @media (max-width: 768px) {
-  .logo {
-    width: 250px;
+  /* Ajustes para dispositivos móveis */
+  .navbar {
+    height: 120px; /* Reduzindo a altura da navbar em telas menores */
+  }
+
+  .navbar-brand .logo {
+    width: 120px; /* Reduzir o tamanho do logo em telas pequenas */
+  }
+
+  .actions {
+    flex-direction: column; /* Empilhar os botões em telas pequenas */
+    align-items: center;
+  }
+
+  #header .content {
+    margin-left: 0;
+    margin-right: 0;
+    text-align: center;
+  }
+
+  .image.phone {
+    margin-left: 0;
+  }
+
+  .image.phone img {
+    max-width: 100%;
+    height: auto;
   }
 }
 
-@media (max-width: 576px) {
-  .logo {
-    width: 200px;
-  }
-}
 
-			
+
+
+
+
+
+
 /* Efeito hover para o ul */
 .nav-menu:hover {
     background-color: blue;
@@ -110,54 +180,54 @@
 	</head>
 	
 	<body class="is-preload">
-<div>
-  <nav class="navbar navbar-expand-lg fixed-top" style="padding-top: 3%; padding-bottom: 2%; background-color: rgb(241, 241, 241);">
-    <div class="container-fluid">
-      <!-- Logo -->
-      <a class="navbar-brand" href="#">
-        <img src="Dalima.png" class="logo" alt="Logo">
-      </a>
 
-      <!-- Botão de Menu de Hambúrguer para telas pequenas -->
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <!-- Itens do Menu -->
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="index.html">Página Inicial</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="Sobre.html">Sobre</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="Endereco.html">Endereço</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-</div>
-
-
-	
-		<div class="novo">
-			<header id="header">
-				
-				<div class="content" style="position:absolute; margin-left: -500px;">
-					
-					<strong><h1  style="text-align: left; color: rgb(245, 4, 4); text-shadow: 1px 1px 1px rgb(26, 25, 25), 0 0 5px rgb(255, 15, 15), 0 0 2px rgb(252, 13, 13); " >Nossa Rede</h1></strong>
-					<ul class="actions">
-						<li><a href="https://wa.me/message/IVURDDVXIOZLL1" class="button primary icon solid fa-download">Contacte-nos</a></li>
-						<li><a href="index2.html" class="button icon solid fa-chevron-down scrolly" style="text-shadow: 1px 1px 2px black, 0 0 20px rgb(255, 0, 0), 0 0 3px rgb(255, 0, 0);">ENCONTRE O QUE VOCE PROCURA</a></li>
-					</ul>
+		<div>
+			<nav class="navbar navbar-expand-lg fixed-top">
+			  <div class="container-fluid">
+				<!-- Logo -->
+				<a class="navbar-brand" href="#">
+				  <img src="Dalima.png" alt="Logo" class="logo">
+				</a>
+		  
+				<!-- Botão de Menu de Hambúrguer para telas pequenas -->
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+				  <span class="navbar-toggler-icon"></span>
+				</button>
+		  
+				<!-- Itens do Menu -->
+				<div class="collapse navbar-collapse" id="navbarNav">
+				  <ul class="navbar-nav ms-auto">
+					<li class="nav-item">
+					  <a class="nav-link" href="index.html">Página Inicial</a>
+					</li>
+					<li class="nav-item">
+					  <a class="nav-link" href="Sobre.html">Sobre</a>
+					</li>
+					<li class="nav-item">
+					  <a class="nav-link" href="Endereco.html">Endereço</a>
+					</li>
+				  </ul>
 				</div>
-				<div class="image phone" style=" margin-left: 50%; "><div class="inner"><img src="Publicidade.png" alt="" /></div></div>
+			  </div>
+			</nav>
+		  </div>
+		
+		 				 <div class="novo">
+			<header id="header">
+			  <div class="content">
+				<h1>Nossa Rede</h1>
+				<ul class="actions">
+				  <li><a href="https://wa.me/message/IVURDDVXIOZLL1" class="button primary icon solid fa-download ">Contacte-nos</a></li>
+				  <li><a href="index2.html" class="button icon solid fa-chevron-down scrolly btn btn-outline-success" style="text-shadow: 1px 1px 2px black, 0 0 20px rgb(255, 0, 0), 0 0 3px rgb(255, 0, 0); font-weight: bold;">ENCONTRE O QUE VOCÊ PROCURA</a></li>
+				</ul>
+			  </div>
+			  <div class="image phone">
+				<div class="inner">
+				  <img src="Publicidade.png" alt="" />
+				</div>
+			  </div>
 			</header>
-			
-		</div>
+		  </div>
 
 
 	
@@ -215,7 +285,7 @@
 <div class="container-xl p-3 my-3 bg-danger text-white" style="max-width: 100%;">
 	
 			<ul class="actions">
-			<li><a href="https://wa.me/message/IVURDDVXIOZLL1" class="button primary icon solid fa-download">Contacte-nos</a></li>
+			<li><a href="https://wa.me/message/IVURDDVXIOZLL1" class="button primary icon solid fa-download ">Contacte-nos</a></li>
 			<li><a href="index2.html" class="button icon solid fa-chevron-down scrolly btn btn-outline-secondary"><strong style="color: white;">ENCONTRE O QUE VOCE PROCURA</strong></a></li>
 		</ul>
 
