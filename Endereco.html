@@ -1,166 +1,134 @@
 <!DOCTYPE HTML>
-
 <html>
-	<head>
-		<title>Dalima</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="mmain.css" />
-		<noscript><link rel="stylesheet" href="nnoscript.css" /></noscript>
+<head>
+    <title>Dalima</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="mmain.css" />
+    <noscript><link rel="stylesheet" href="nnoscript.css" /></noscript>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <script src="bootstrap.bundle.min.js"></script>
 
-		<link rel="stylesheet" href="bootstrap.min.css">
-		<script src="bootstrap.bundle.min.js"></script>
+    <style>
+        /* Navbar */
+        .navbar {
+            background-color: rgb(241, 241, 241);
+            height: 145px;
+            display: flex;
+            align-items: center;
+        }
 
-		
+        .logo {
+            width: 300px; /* Ajuste proporcional para logo */
+            height: auto;
+        }
 
-<style>
+        /* Espaçamento para compensar a navbar fixa */
+        .novo {
+            padding-top: 80px;
+        }
 
+        #header .content {
+            text-align: left;
+            margin: 0 auto;
+            max-width: 1100px; /* Limita largura do conteúdo */
+        }
 
+        /* Títulos e descrições */
+        .header-title {
+			padding-top: 15%;
+            text-align: left;
+            color: rgb(75, 73, 73);
+            text-shadow: 1px 1px 1px rgb(0, 0, 0);
+        }
 
+        .header-description {
+            color: rgb(255, 255, 255);
+            text-shadow: 1px 1px 1px rgb(66, 1, 1);
+            font-family: 'Times New Roman', Times, serif;
+        }
 
-/* Efeito hover para o ul */
-.nav-menu:hover {
-    background-color: blue;
-}
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .navbar {
+                height: 100px; /* Ajusta altura em dispositivos menores */
+            }
 
-/* Efeito hover para os links */
-.nav-link:hover {
-    color: #0056b3; /* Exemplo de mudança de cor do link */
-}
+            .logo {
+                width: 120px; /* Reduz tamanho do logo */
+            }
 
-.content {
-    margin-left: -500px;
-}
+            .novo {
+                padding-top: 100px; /* Ajusta espaço superior */
+            }
 
-/* Estilo do título */
-.header-title {
-	position: relative;
-    padding: 0;
-    margin-top: -15%;
-    text-align: left;
-    color: rgb(75, 73, 73);
-    text-shadow: 1px 1px 1px rgb(0, 0, 0), 0 0 5px rgb(46, 1, 1), 0 0 2px rgb(252, 13, 13);
-}
+            .header-title,
+            .header-description {
+                text-align: center; /* Centraliza o conteúdo em telas pequenas */
+            }
 
-/* Estilo do parágrafo */
-.header-description {
-    text-align: left;
-    position: absolute;
-    padding: 0;
-    margin-top: -7%;
-    color: rgb(255, 255, 255);
-    text-shadow: 1px 1px 1px rgb(66, 1, 1), 0 0 5px rgb(99, 2, 2), 0 0 2px rgb(73, 2, 2);
-	font-family: 'Times New Roman', Times, serif;
-}
+            .actions {
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
 
+<body class="is-preload">
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="Dalima.png" alt="Logo" class="logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Página Inicial</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Sobre.html">Sobre</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Endereco.html">Endereço</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
+    <header id="header" class="novo">
+        <div class="content">
+            <h1 class="header-title">Obrigado por visitar a nossa página</h1>
+            <p class="header-description">
+                Endereço<br>
+                Av. 25 de Setembro, 2400 RC drt<br>
+                Maputo, Moçambique!
+            </p>
+            <p class="header-description">
+                Contacto<br>
+                874711182
+            </p>
+        </div>
+    </header>
 
-</style>
+    <div class="container mt-5" style="background-color: rgb(119, 3, 3); color: aliceblue; max-width: 100%;">
+        <h2><strong>Dalima</strong></h2>
+        <p>Há 15 anos que mantemos uma forte liderança no mercado Outdoor Digital, através da maior e mais avançada rede de Painéis Digitais Outdoor em Moçambique.</p>
+        <p>Estamos sedeados na Cidade da Matola, Av 25 de Setembro, P. 175</p>
+        <ul class="icons">
+            <li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
+            <li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
+            <li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
+            <li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+            <li><a href="#" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+        </ul>
+    </div>
 
-		
-	</head>
-	
-	<body class="is-preload">
-
-<div class="container mt-3">
-		<nav class="navbar navbar-expand-sm  fixed-top" style="padding-top: 3%; padding-bottom: 2%; background-color: rgb(241, 241, 241);">
-			<img src="Dalima.png" width="400" height="310" style="position: absolute;">
-			
-			<ul class="navbar-nav" style="padding-left: 70%;">
-			
-		   	  <li class="nav-item">
-				<a class="nav-link" href="index.html">Pagina inicial</a>
-			  </li>
-			  <li class="nav-item" style="text-align:end;">
-				<a class="nav-link" href="Sobre.html">Sobre</a>
-			  </li>
-			  <li class="nav-item" style="text-align:end;">
-				<a class="nav-link" href="Endereco.html">Endereço</a>
-			  </li>
-			</ul>
-		  </nav>
-		</div>  
-	
-		
-		<header id="header">
-
-			<div class="content">
-				<h1 class="header-title">Obrigado por visitar a nossa página</h1> <br> <br> <br> <br>
-				
-				<p class="header-description">
-					
-	Endereço <br>
-	Av. 25 de Setembro, 2400 RC drt <br>
-	Maputo, Moçambique! 
-				</p> 
-				<div> 
-				<p class="header-description" style="margin-left: 400pt;">Contacto <br> 874711182 <br></p>
-			</div>
-			</div>
-		</header>
-		
-
-
-
-	
-
-	
-			
-			
-
-		
-
-
-
-
-
-		<div class="container mt-5" style="background-color: rgb(119, 3, 3); max-width: 100%; color: aliceblue; text-align: left;">
-			<div class="row">
-				<!-- Two -->
-							<h2> <strong>Dalima</strong></h2>
-						<p>Há 15 anos que mantemos uma forte liderança no mercado Outdoor Digital, através da maior e mais avançada rede de Painéis Digitais Outdoor em Moçambique.</p>
-						<p>Estamos Sedeados na Cidade da Matola, Av 25 de Setembro, P. 175</p>
-
-
-						<ul class="icons" style="margin-left: 5pt; ">
-						<li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
-						<li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
-						<li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
-						<li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
-						<li><a href="#" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
-					</ul>
-				
-			  </div>
-			  
-			  
-			</div>
-
-			  </div>
-
-
-		  </div>
-	</div>
-	
-
-
-
-
-
-
-
-		
-
-		<!-- Scripts -->
-			<script src="jjquery.min.js"></script>
-			<script src="jjquery.scrolly.min.js"></script>
-			<script src="bbrowser.min.js"></script>
-			<script src="bbreakpoints.min.js"></script>
-			<script src="uutil.js"></script>
-			<script src="mmain.js"></script>
-
-	
-	
-	
-	
-		</body>
+    <!-- Scripts -->
+    <script src="jjquery.min.js"></script>
+    <script src="jjquery.scrolly.min.js"></script>
+    <script src="bbrowser.min.js"></script>
+    <script src="bbreakpoints.min.js"></script>
+    <script src="uutil.js"></script>
+    <script src="mmain.js"></script>
+</body>
 </html>
