@@ -11,6 +11,109 @@
 		<link rel="stylesheet" href="bootstrap.min.css">
 		<script src="bootstrap.bundle.min.js"></script>
 
+
+
+		<style>
+
+
+/* Estilos gerais para a Navbar */
+.navbar {
+  background-color: rgb(241, 241, 241);
+  height: 145px; /* Definindo a altura da navbar */
+  display: flex;
+  align-items: center; /* Alinha o conteúdo verticalmente */
+}
+
+.navbar-brand .logo {
+  width: 300px; /* Logo com tamanho fixo de 400px */
+  height: auto;
+}
+
+/* Garantir que o conteúdo da div "novo" seja responsivo */
+.novo {
+  padding-top: 80px; /* Ajuste para compensar a altura da navbar */
+
+}
+
+.content {
+  text-align: center;
+justify-content: center;
+
+  
+}
+
+/* Títulos dentro do header */
+#header h1 {
+  color: red;
+  text-shadow: 1px 1px 1px rgb(26, 25, 25), 0 0 5px rgb(255, 15, 15), 0 0 2px rgb(252, 13, 13);
+  
+}
+
+/* Responsividade para os botões */
+.button {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+  text-align: center;
+}
+
+
+
+
+
+@media (max-width: 768px) {
+  /* Ajustes para dispositivos móveis */
+  .navbar {
+    height: 120px; /* Reduzindo a altura da navbar em telas menores */
+  }
+
+  .navbar-brand .logo {
+    width: 120px; /* Reduzir o tamanho do logo em telas pequenas */
+  }
+
+  .actions {
+    flex-direction: column; /* Empilhar os botões em telas pequenas */
+    align-items: center;
+	justify-content: center;
+  }
+
+  .content {
+   justify-content: center;
+    text-align: center;
+  }
+
+  .image.phone {
+    margin-left: 0;
+  }
+
+  .image.phone img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+
+
+
+
+
+
+/* Efeito hover para o ul */
+.nav-menu:hover {
+    background-color: blue;
+}
+
+/* Efeito hover para os links */
+.nav-link:hover {
+    color: #0056b3; /* Exemplo de mudança de cor do link */
+}
+
+
+
+
+		</style>
+
 	</head>
 	<body class="is-preload">
 
@@ -18,40 +121,56 @@
 			<div id="wrapper" style="background-color: brown;">
 
 				<div>
-
-					<nav class="navbar navbar-expand-sm  fixed-top" style="padding-top: 3%; padding-bottom: 2%; background-color: rgb(241, 241, 241);">
-						<img src="Dalima.png" width="400" height="310" style="position: absolute;">
-						
-						<ul class="navbar-nav" style="padding-left: 70%;">
-						
-							 <li class="nav-item">
-							<a class="nav-link" href="index.html">Pagina inicial</a>
-						  </li>
-						  <li class="nav-item" style="text-align:end;">
-							<a class="nav-link" href="Sobre.html">Sobre</a>
-						  </li>
-						  <li class="nav-item" style="text-align:end;">
-							<a class="nav-link" href="Endereco.html">Endereço</a>
-						  </li>
-						</ul>
-					  </nav>
-
-				</div>
+					<nav class="navbar navbar-expand-lg fixed-top">
+					  <div class="container-fluid">
+						<!-- Logo -->
+						<a class="navbar-brand" href="#">
+						  <img src="Dalima.png" alt="Logo" class="logo">
+						</a>
+				  
+						<!-- Botão de Menu de Hambúrguer para telas pequenas -->
+						<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+						  <span class="navbar-toggler-icon"></span>
+						</button>
+				  
+						<!-- Itens do Menu -->
+						<div class="collapse navbar-collapse" id="navbarNav">
+						  <ul class="navbar-nav ms-auto">
+							<li class="nav-item">
+							  <a class="nav-link" href="index.html">Página Inicial</a>
+							</li>
+							<li class="nav-item">
+							  <a class="nav-link" href="Sobre.html">Sobre</a>
+							</li>
+							<li class="nav-item">
+							  <a class="nav-link" href="Endereco.html">Endereço</a>
+							</li>
+						  </ul>
+						</div>
+					  </div>
+					</nav>
+				  </div>
 
 				<!-- Banner -->
+				<div class="novo">
 					<section id="banner" class="major" style="background-image: url(escritorio.jpg); background-repeat: no-repeat; max-width: 100%;">
-						<div class="inner">
-							<header class="major">
+						
+						<div class="inner" >
+							
+							<div class="content" >
+							
 								
-							</header>
-							<div class="content">
-								
-								<ul class="actions">
-									<li><a href="#" class="button next scrolly" style=" font-size: 30pt; text-align: left; color: rgb(245, 4, 4); text-shadow: 1px 1px 1px rgb(26, 25, 25), 0 0 5px rgb(255, 15, 15), 0 0 2px rgb(252, 13, 13); ">Grelha dos nossos Servicos</a></li>
-								</ul>
+				  <button type="button" class="btn btn-outline-danger btn-lg" style="text-align: center; justify-content: center; font-weight: bold; margin-right: -50%;" ><a href="index2.html"  class="btn btn-outline-danger btn-lg"  >GRELHA DE SERVICOS</a></button>
+							
+							
 							</div>
+						
+							
 						</div>
+					
 					</section>
+				</div>
+
 
 				<!-- Main -->
 					<div id="main">
@@ -107,11 +226,14 @@
 									
 								</article>
 
-								<ul class="actions" style="margin-left: 50%; margin-top: -10%;">
-									<li><a href="https://wa.me/message/IVURDDVXIOZLL1" class="button next btn btn-outline-secondary" style="color:brown;font-size: large;">Peça o seu orçamento</a></li>
+								<ul class="actions">
+
+	 <button type="button" class="btn btn danger btn-lg" style="text-align: center; justify-content: center; font-weight: bold; margin-top: 50px; margin-left: 25px;" ><a href="https://wa.me/message/IVURDDVXIOZLL1"  class="btn btn-outline-danger btn-lg"  >Peça o seu orçamento</a></button>
+
 								</ul>
 								
 							</section>
+						
 <br>
 						<!-- Two -->
 							<section id="two" style="background-color: brown; color: aliceblue; text-align: left;">
